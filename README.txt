@@ -9,7 +9,9 @@ Output: Naive Bayes classifier C = (SPAM || HAM)
 
 Training.cc:
 Input: spam.csv
-
+sentence structure:
+ham || spam,...,,,
+... = DOC
 Initial Probabilities:
 P(SPAM) = SPAM(TRAIN_DOC) / TOTAL_DOCS 
 P(HAM) = HAM(DOC) / TOTAL_DOCS
