@@ -5,11 +5,11 @@ This program uses a spam csv file to train a classifier to discriminate between 
 Input: Document D
 fixed classes HAM and SPAM.
 Training set of M hand labled documents (D1, C1), ..., (Dm, Cm)
-Output:
-Naive Bayes classifier C = (SPAM || HAM)
+Output: Naive Bayes classifier C = (SPAM || HAM)
 
 Training.cc:
 Input: spam.csv
+
 Initial Probabilities:
 P(SPAM) = SPAM(TRAIN_DOC) / TOTAL_DOCS 
 P(HAM) = HAM(DOC) / TOTAL_DOCS
@@ -23,9 +23,10 @@ Output: M.txt
 
 Testing.cc:
 Input: M.txt
+Classifier:
  P(SPAM|TEST_DOC) = P(SPAM) * Product(P(all words In TEST_DOC corresponding to M|SPAM)
  P(HAM|TEST_DOC) = P(HAM) * Product(P(all words In TEST_DOC corresponding to M|HAM)
- 
+ Decision:
  If P(SPAM|TEST_DOC) > P(HAM|TEST_DOC)
   Output: "HAM"
  else
