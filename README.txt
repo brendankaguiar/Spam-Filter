@@ -9,7 +9,7 @@ Output:
 Naive Bayes classifier C = (SPAM || HAM)
 
 Training.cc:
-input: spam.csv
+Input: spam.csv
 Initial Probabilities:
 P(SPAM) = SPAM(TRAIN_DOC) / TOTAL_DOCS 
 P(HAM) = HAM(DOC) / TOTAL_DOCS
@@ -22,10 +22,11 @@ For Each word i in DOC
 Output: M.txt
 
 Testing.cc:
+Input: M.txt
  P(SPAM|TEST_DOC) = P(SPAM) * Product(P(all words In TEST_DOC corresponding to M|SPAM)
  P(HAM|TEST_DOC) = P(HAM) * Product(P(all words In TEST_DOC corresponding to M|HAM)
  
  If P(SPAM|TEST_DOC) > P(HAM|TEST_DOC)
-  output: "HAM"
+  Output: "HAM"
  else
-  output: "SPAM"
+  Output: "SPAM"
