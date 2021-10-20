@@ -12,6 +12,10 @@ struct DOCUMENT{
 	void setClass(std::string parser)
 	{
 		Class = parser;
+		if (Class == "ham")
+			HAM_CT++;
+		else
+			SPAM_CT++;
 	}
 	void setText(std::string parser, int i)
 	{
@@ -27,6 +31,8 @@ int main() {
 	int val = load_docs("spam.csv", myDoc);
 	if (val == 0)
 		std::cout << "Document Successfully loaded\n";
+	float P_of_HAM = (float)HAM_CT / (HAM_CT + (float)SPAM_CT);
+	float P_of_SPAM = 1 - P_of_HAM;
 
 	return 0;
 }
