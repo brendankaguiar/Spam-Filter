@@ -24,7 +24,7 @@ For Each word i in DOC
 Output: M.txt
 
 Testing.cc:
-Input: M.txt
+Input: M.txt, Text Document
 Classifier:
  P(SPAM|TEST_DOC) = P(SPAM) * Product(P(all words In TEST_DOC corresponding to M|SPAM)
  P(HAM|TEST_DOC) = P(HAM) * Product(P(all words In TEST_DOC corresponding to M|HAM)
